@@ -1,6 +1,7 @@
-package projecteuler.problem3;
+
 
 import static org.junit.Assert.*;
+import Problem3;
 
 import org.junit.Before;
 import org.junit.Test;
