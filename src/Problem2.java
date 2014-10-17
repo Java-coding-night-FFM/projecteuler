@@ -14,29 +14,22 @@ public class Problem2 {
         long sum=0;
         System.out.println("\n\nFibonacci series upto " + maxNum + " numbers : ");
 
+        long before=1, last=1, fibo;
+        while((fibo=before+last)<4000000) {
 
-        //printing Fibonacci series upto number
-        for (int i = 1; i <= maxNum; i++) {
-            if(getFibonacciNumber(i)%2==0){
-                sum += getFibonacciNumber(i);
-                System.out.println("partial"+sum);
+            if(fibo%2==0){
+            /*    System.out.println("partial "+sum);*/
+                sum+=fibo;
             }
-
         }
-        System.out.println("total"+sum);
+
+
+
+        System.out.println("total :"+sum);
         System.out.println("done!");
     }
 
 
-    public static long getFibonacciNumber(int number) {
 
-
-        if(number == 1 || number == 2){
-            return 1;
-        }
-
-        return getFibonacciNumber(number - 1) + getFibonacciNumber(number - 2); //tail recursion
-
-    }
 }
 
